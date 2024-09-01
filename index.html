@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+  <meta charset="UTF-8">
+  <meta content="IE=edge" http-equiv="X-UA-Compatible">
+  <meta content="width=device-width,initial-scale=1" name="viewport">
+  <meta content="description" name="description">
+  <meta name="google" content="notranslate" />
+  <meta content="Mashup templates have been developped by Orson.io team" name="author">
+
+  <!-- Disable tap highlight on IE -->
+  <meta name="msapplication-tap-highlight" content="no">
+  
+  <link rel="apple-touch-icon" sizes="180x180" href="./assets/apple-icon-180x180.png">
+  <link href="./assets/favicon.ico" rel="icon">
+
+  <title>YNA Digital</title>  
+
+  <link href="./main.3f6952e4.css" rel="stylesheet">
+  <style>
+    /* Genel arka plan */
+    html, body {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      background-color: black; /* Genel arka plan rengini siyah yap */
+    }
+
+    /* Hero section stil */
+    .hero-full-container {
+      position: relative;
+      background: rgba(0, 0, 0, 0.6) url('./assets/images/space.jpg') no-repeat center center;
+      background-size: cover;
+      height: 100vh; /* Tam ekran yüksekliği */
+      display: flex;
+      align-items: center;
+      justify-content: flex-start; /* Metni sola hizalar */
+      text-align: left; /* Metni sola hizalar */
+      color: white;
+      padding: 0 20px; /* Sağ ve sol kenarlardan boşluk bırakır */
+    }
+
+    .hero-full-container::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.5); /* Soluk siyah overlay */
+      z-index: 1; /* Overlay'in metnin üstünde görünmesini sağlar */
+    }
+
+    .hero-full-container .text-content {
+      position: relative; /* Metnin overlay'in üstünde görünmesini sağlar */
+      z-index: 2;
+    }
+
+    /* WhatsApp button styling */
+    .whatsapp-button {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      width: 60px;
+      height: 60px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 24px;
+      text-align: center;
+      z-index: 1000;
+      background-color: #25D366; /* WhatsApp green */
+      border-radius: 50%;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+      overflow: hidden;
+      transition: transform 0.3s ease;
+      animation: pulse 2s infinite;
+    }
+
+    .whatsapp-button:hover {
+      transform: scale(1.2);
+    }
+
+    .whatsapp-button img {
+      width: 50px;
+      height: 50px;
+    }
+
+    @keyframes pulse {
+      0% {
+        transform: scale(1);
+        opacity: 1;
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+      }
+      50% {
+        transform: scale(1.3);
+        opacity: 0.5;
+        box-shadow: 0 0 30px rgba(0, 0, 0, 0.7);
+      }
+      100% {
+        transform: scale(1);
+        opacity: 1;
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+      }
+    }
+  </style>
+</head>
+
+<body class="minimal">
+  <div id="site-border-left"></div>
+  <div id="site-border-right"></div>
+  <div id="site-border-top"></div>
+  <div id="site-border-bottom"></div>
+  
+  <!-- Header -->
+  <header>
+    <nav class="navbar navbar-fixed-top navbar-inverse">
+      <div class="container">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse" aria-expanded="false">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbar-collapse">
+          <ul class="nav navbar-nav">
+            <li><a href="./index.html" title="">01 : Anasayfa</a></li>
+            <li><a href="./works.html" title="">02 : Hizmetler</a></li>
+            <li><a href="./about.html" title="">03 : Hakkımızda</a></li>
+            <li><a href="./contact.html" title="">04 : İletişim</a></li>
+          </ul>
+        </div> 
+      </div>
+    </nav>
+  </header>
+
+  <!-- Hero section -->
+  <div class="hero-full-container background-image-container white-text-container">
+    <div class="container">
+      <div class="row">
+        <div class="col-xs-12">
+          <div class="hero-full-wrapper">
+            <div class="text-content">
+              <h1>Merhaba,<br>
+                <span id="typed-strings">
+                  <span>YNA Dijital'e</span>
+                  <span>Hoşgeldiniz</span>
+                </span>
+                <span id="typed"></span>
+              </h1>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- WhatsApp button -->
+  <a href="https://wa.me/905421367056" class="whatsapp-button" target="_blank" title="Bize WhatsApp'tan ulaşın">
+    <img src="/assets/images/whatsapp.png" alt="WhatsApp">
+  </a>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function (event) {
+      type();
+      movingBackgroundImage();
+    });
+  </script>
+
+  <script type="text/javascript" src="./main.70a66962.js"></script>
+</body>
+
+</html>
